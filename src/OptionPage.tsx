@@ -30,6 +30,8 @@ function OptionPage() {
         const n = getHierarchyNodeFromId(id, hierarchyNodes) as HierarchyNode;
         n.children.push({ id: crypto.randomUUID(), data: "testaaaaaa", children: [] })
 
+        console.log(hierarchyNodes)
+;
         setHierarchyNodes(nodes => [...nodes]);
     }
     
@@ -49,21 +51,33 @@ const abc : HierarchyNode[] = [
 
     {
         id: crypto.randomUUID(),
-        data: "a1",
+        data: "A1",
         children: [
             {
                 id: crypto.randomUUID(),
-                data: "b1",
-                children: []
+                data: "A1-1",
+                children: [
+                    {
+                        id: crypto.randomUUID(),
+                        data: "A1-1-1",
+                        children: [
+                            {
+                                id: crypto.randomUUID(),
+                                data: "A1-1-1-1",
+                                children: []
+                            }
+                        ]
+                    }
+                ]
             },
 
             {
                 id: crypto.randomUUID(),
-                data: "b2",
+                data: "A1-2",
                 children: [
                     {
                         id: crypto.randomUUID(),
-                        data: "c1",
+                        data: "A1-2-1",
                         children: []
                     }
                 ]
@@ -71,113 +85,113 @@ const abc : HierarchyNode[] = [
         ]
     },
 
-    {
-        id: crypto.randomUUID(),
-        data: "testbbb",
-        children: [
-            {
-                id: crypto.randomUUID(),
-                data: "testbbbchildaaaa",
-                children: [],
-            },
+    // {
+    //     id: crypto.randomUUID(),
+    //     data: "testbbb",
+    //     children: [
+    //         {
+    //             id: crypto.randomUUID(),
+    //             data: "testbbbchildaaaa",
+    //             children: [],
+    //         },
 
-            {
-                id: crypto.randomUUID(),
-                data: "testbbbchildbbbb",
-                children: [],
-            }
-        ]
-    },
+    //         {
+    //             id: crypto.randomUUID(),
+    //             data: "testbbbchildbbbb",
+    //             children: [],
+    //         }
+    //     ]
+    // },
 
-    {
-        id: crypto.randomUUID(),
-        data: "test1",
-        children: [
-            {
-                id: crypto.randomUUID(),
-                data: "test2",
-                children: [
-                    {
-                        id: crypto.randomUUID(),
-                        data: "test3",
-                        children: [
-                            {
-                                id: crypto.randomUUID(),
-                                data: "test4",
-                                children: [
-                                    {
-                                        id: crypto.randomUUID(),
-                                        data: "test5-1",
-                                        children: [],
-                                    },
+    // {
+    //     id: crypto.randomUUID(),
+    //     data: "test1",
+    //     children: [
+    //         {
+    //             id: crypto.randomUUID(),
+    //             data: "test2",
+    //             children: [
+    //                 {
+    //                     id: crypto.randomUUID(),
+    //                     data: "test3",
+    //                     children: [
+    //                         {
+    //                             id: crypto.randomUUID(),
+    //                             data: "test4",
+    //                             children: [
+    //                                 {
+    //                                     id: crypto.randomUUID(),
+    //                                     data: "test5-1",
+    //                                     children: [],
+    //                                 },
                                     
-                                    {
-                                        id: crypto.randomUUID(),
-                                        data: "test5-2",
-                                        children: [],
-                                    },
+    //                                 {
+    //                                     id: crypto.randomUUID(),
+    //                                     data: "test5-2",
+    //                                     children: [],
+    //                                 },
 
-                                    {
-                                        id: crypto.randomUUID(),
-                                        data: "test5-3",
-                                        children: [],
-                                    },
+    //                                 {
+    //                                     id: crypto.randomUUID(),
+    //                                     data: "test5-3",
+    //                                     children: [],
+    //                                 },
 
-                                    {
-                                        id: crypto.randomUUID(),
-                                        data: "test5-4",
-                                        children: [],
-                                    }
-                                ],
-                            },
-                            {
-                                id: crypto.randomUUID(),
-                                data: "test4-2",
-                                children: [],
-                            }
-                        ],
-                    },
-                    {
-                        id: crypto.randomUUID(),
-                        data: "test6",
-                        children: [
-                            {
-                                id: crypto.randomUUID(),
-                                data: "test7",
-                                children: [
-                                    {
-                                        id: crypto.randomUUID(),
-                                        data: "test7-1",
-                                        children: [],
-                                    },
+    //                                 {
+    //                                     id: crypto.randomUUID(),
+    //                                     data: "test5-4",
+    //                                     children: [],
+    //                                 }
+    //                             ],
+    //                         },
+    //                         {
+    //                             id: crypto.randomUUID(),
+    //                             data: "test4-2",
+    //                             children: [],
+    //                         }
+    //                     ],
+    //                 },
+    //                 {
+    //                     id: crypto.randomUUID(),
+    //                     data: "test6",
+    //                     children: [
+    //                         {
+    //                             id: crypto.randomUUID(),
+    //                             data: "test7",
+    //                             children: [
+    //                                 {
+    //                                     id: crypto.randomUUID(),
+    //                                     data: "test7-1",
+    //                                     children: [],
+    //                                 },
 
-                                    {
-                                        id: crypto.randomUUID(),
-                                        data: "test7-2",
-                                        children: [],
-                                    },
-                                ],
-                            },
-                            {
-                                id: crypto.randomUUID(),
-                                data: "test8",
-                                children: [
+    //                                 {
+    //                                     id: crypto.randomUUID(),
+    //                                     data: "test7-2",
+    //                                     children: [],
+    //                                 },
+    //                             ],
+    //                         },
+    //                         {
+    //                             id: crypto.randomUUID(),
+    //                             data: "test8aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    //                             children: [
                                     
-                                    {
-                                        id: crypto.randomUUID(),
-                                        data: "test8-1",
-                                        children: [],
-                                    },
+    //                                 {
+    //                                     id: crypto.randomUUID(),
+    //                                     data: "test8-1",
+    //                                     children: [],
+    //                                 },
 
-                                ],
-                            }
+    //                             ],
+    //                         }
              
-                        ],
-                    }
-                ],
-            }
-        ]
-    },
+    //                     ],
+    //                 }
+    //             ],
+    //         }
+    //     ]
+    // },
 
 ]
 

@@ -4,10 +4,10 @@ import react from '@vitejs/plugin-react'
 
 const manifest = defineManifest({
     manifest_version: 3,
-    name: "Open Bookmarks",
+    name: "cheesecake",
     version: "1.0.0",
     options_page: "option.html",
-    permissions: ["bookmarks"],
+    permissions: [],
     action: {
       default_popup: "index.html",
     },
